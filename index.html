@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino Zenith 🎰</title>
+    <!-- VÍNCULO COM O ARQUIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cassino-wrapper">
+        <h1>CASSINO ZENITH 🎰</h1>
+        <div class="subtitle">Banca Oficial de Apostas do RPG</div>
+
+        <!-- LOGIN SEGURO DO JOGADOR -->
+        <div id="painel-autenticacao" style="margin-bottom: 16px;">
+            <input type="text" id="p-id" placeholder="SEU ID DE JOGADOR" autocomplete="off" style="width:40%; padding:8px;">
+            <input type="password" id="p-pass" placeholder="SENHA" style="width:30%; padding:8px;">
+            <button onclick="conectarBanca()" style="padding:8px 12px; font-size:0.85rem;">Logar</button>
+        </div>
+
+        <!-- JANELA DE STATUS FLUTUANTE (ABRE APÓS LOGIN) -->
+        <div class="janela-status-jogador" id="status-box-flutuante">
+            <div class="status-grid-c">
+                <span class="status-nome-c" id="status-lbl-nome">Shinobi Logado</span>
+                <span class="status-vila-c" id="status-lbl-vila">Konoha</span>
+            </div>
+            <p class="status-saldo-c">💰 Carteira: <span id="status-lbl-saldo">0</span> Ryos</p>
+        </div>
+
+        <!-- ABAS DE NAVEGAÇÃO DOS JOGOS -->
+        <div class="cassino-tabs" id="abas-jogos-box">
+            <button class="tab-btn active" onclick="mudarAbaJogo('slots', this)">Caça-Níveis</button>
+            <button class="tab-btn" onclick="mudarAbaJogo('dados', this)">Dados</button>
+            <button class="tab-btn" onclick="mudarAbaJogo('roleta', this)">Roleta</button>
+        </div>
+
+        <!-- MODALIDADE 1: ROLETES SLOTS -->
+        <div id="game-slots" class="game-section active">
+            <div class="slots-row">
+                <div class="rolete-box" id="sl-1">🦊</div>
+                <div class="rolete-box" id="sl-2">🦊</div>
+                <div class="rolete-box" id="sl-3">🦊</div>
+            </div>
+        </div>
+
+        <!-- MODALIDADE 2: DADOS DO DESTINO -->
+        <div id="game-dados" class="game-section">
+            <div class="dado-display" id="dado-box">🎲</div>
+            <p style="margin:0; font-size:0.75rem; color:#666;">Tire de 13 a 20 no D20 para dobrar a aposta (Banca: 60%).</p>
+        </div>
+
+        <!-- MODALIDADE 3: ROLETA DAS VILAS -->
+        <div id="game-roleta" class="game-section">
+            <select id="aposta-alvo-roleta" class="roleta-select-vila">
+                <option value="konoha">Apostar em Konoha (Paga 3x)</option>
+                <option value="nevoa">Apostar em Névoa (Paga 3x)</option>
+                <option value="areia">Apostar em Areia (Paga 3x)</option>
+                <option value="nuvem">Apostar em Nuvem (Paga 3x)</option>
+                <option value="akatsuki">Apostar na AKATSUKI (Raro - Paga 10x)</option>
+            </select>
+            <div id="roleta-resultado-lbl">---</div>
+        </div>
+
+        <!-- ENTRADA DE QUANTIAS UNIFICADA -->
+        <div class="input-block-c" id="bloco-controles-aposta" style="display: none;">
+            <select id="quantia-aposta">
+                <option value="500">Aposta (500 Ryos)</option>
+                <option value="2000">Aposta (2.000 Ryos)</option>
+                <option value="10000">Aposta (10.000 Ryos)</option>
+            </select>
+            <button class="btn-acao-giro" id="btn-alavanca-master" onclick="dispararApostaBanca()">Girar Alavanca</button>
+        </div>
+
+        <div class="status-carteira-lbl" id="status-txt">Faça login para destravar a banca</div>
+    </div>
+
+    <!-- VÍNCULO COM O ARQUIVO JAVASCRIPT EXTERNO -->
+    <script src="sript.js"></script>
+</body>
+</html>

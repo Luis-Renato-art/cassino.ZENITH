@@ -1,0 +1,230 @@
+/* =======================================================
+   DESIGN CORE: LAYOUT DE CORES DO CASSINO
+   ======================================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #0c0505;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.cassino-wrapper {
+    width: 100%;
+    max-width: 460px;
+    padding: 24px;
+    background: linear-gradient(135deg, #140808, #220e0e);
+    border-radius: 20px;
+    border: 2px solid #ff4500;
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.2);
+    text-align: center;
+    margin: 16px;
+    position: relative;
+}
+
+h1 {
+    margin: 0 0 4px 0;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #ff4500;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* PAINEL FLUTUANTE DE STATUS */
+.janela-status-jogador {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 191, 105, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.status-grid-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.status-nome-c {
+    font-weight: 800;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.status-vila-c {
+    font-size: 0.75rem;
+    background: #ff4500;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.status-saldo-c {
+    font-size: 1.1rem;
+    font-family: monospace;
+    color: #ffbf69;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* ABAS DE SELEÇÃO */
+.cassino-tabs {
+    display: none;
+    gap: 6px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 4px;
+    color: #888;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.tab-btn.active {
+    background: #ff4500;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255, 69, 0, 0.3);
+}
+
+/* SEÇÕES DOS MINIGAMES */
+.game-section {
+    display: none;
+    background: #000;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    min-height: 110px;
+}
+
+.game-section.active {
+    display: block;
+}
+
+.slots-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.rolete-box {
+    width: 64px;
+    height: 64px;
+    background: #111;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.dado-display {
+    font-size: 3.5rem;
+    text-shadow: 0 0 15px #ff0055;
+    margin: 10px 0;
+}
+
+#roleta-resultado-lbl {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ff5fa0;
+    margin-bottom: 6px;
+}
+
+.roleta-select-vila {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* CONTROLADORES DE FLUXO */
+.input-block-c {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-acao-giro {
+    background: linear-gradient(135deg, #ff4500, #ff0055);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:disabled,
+select:disabled,
+input:disabled {
+    background: #222 !important;
+    color: #555 !important;
+    cursor: not-allowed;
+}
+
+.status-carteira-lbl {
+    font-size: 0.85rem;
+    color: #ffbf69;
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+/* ANIMAÇÃO DE SPIN */
+.girando {
+    animation: spinRlt 0.1s linear infinite;
+}
+
+@keyframes spinRlt {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
