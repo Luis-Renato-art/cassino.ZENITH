@@ -1,11 +1,12 @@
 /* =======================================================
    DESIGN CORE: LAYOUT DE CORES DO CASSINO
    ======================================================= */
-body {
+.body {
+    background-image: url('https://mrwallpaper.com/images/hd/kakegurui-yumeko-portrait-kksa8nxfjxhns7g6.jpg');
+    background-size: cover;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #0c0505;
     color: #fff;
     display: flex;
     align-items: center;
@@ -17,7 +18,7 @@ body {
     width: 100%;
     max-width: 460px;
     padding: 24px;
-    background: linear-gradient(135deg, #140808, #220e0e);
+    background: none;
     border-radius: 20px;
     border: 2px solid #ff4500;
     box-shadow: 0 0 25px rgba(255, 69, 0, 0.2);
