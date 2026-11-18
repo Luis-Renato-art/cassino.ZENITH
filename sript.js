@@ -1,7 +1,7 @@
 // =======================================================
 // CONFIGURAÇÃO CORE DO BANCO DE DADOS DO CASSINO
 // =======================================================
-const API_URL = "https://script.google.com/macros/s/AKfycby4BK37x394VZA6iCBE5Si15ye_mSdCLN8msNQPTRNmyCNxhvYbTyi40gvFm_n-2D2XmA/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbz5vz7BeWgMCL9Z7c982paX0fdlDGok1XCkRmZx4bylD_aU_oFvsmmZOFOfLLDkQPQ_Gw/exec";
 const POOL_EMOJIS = ['🦊', '💀', '⛩️', '🗡️', '🧿', '💎'];
 let MESTRE_PLAYER_ID = null;
 let MODALIDADE_ATIVA = "slots";

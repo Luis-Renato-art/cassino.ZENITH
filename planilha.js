@@ -1,1 +1,0 @@
-export const planilha = { url: "https://script.google.com/macros/s/AKfycby4BK37x394VZA6iCBE5Si15ye_mSdCLN8msNQPTRNmyCNxhvYbTyi40gvFm_n-2D2XmA/exec" };
