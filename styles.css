@@ -2,7 +2,7 @@
    DESIGN CORE: LAYOUT DE CORES DO CASSINO
    ======================================================= */
 .body {
-    background-image: url('https://mrwallpaper.com/images/hd/kakegurui-yumeko-portrait-kksa8nxfjxhns7g6.jpg');
+    background-image: url('images/fichas-e-bilhar.jpg');
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -112,7 +112,7 @@ h1 {
     box-shadow: 0 2px 8px rgba(255, 69, 0, 0.3);
 }
 
-/* SEÇÕES DOS MINIGAMES */
+/* SEÇÕES DOS JOGOS DE AZAR */
 .game-section {
     display: none;
     background: #000;

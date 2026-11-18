@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cassino Zenith 🎰</title>
-    <!-- VÍNCULO COM O ARQUIVO CSS EXTERNO -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
 
     <div class="cassino-wrapper">
         <h1>CASSINO ZENITH 🎰</h1>
-        <div class="subtitle">Banca Oficial de Apostas do RPG</div>
-
-        <!-- LOGIN SEGURO DO JOGADOR -->
+            <!-- LOGIN SEGURO DO JOGADOR -->
         <div id="painel-autenticacao" style="margin-bottom: 16px;">
             <input type="text" id="p-id" placeholder="SEU ID DE JOGADOR" autocomplete="off" style="width:40%; padding:8px;">
             <input type="password" id="p-pass" placeholder="SENHA" style="width:30%; padding:8px;">
             <button onclick="conectarBanca()" style="padding:8px 12px; font-size:0.85rem;">Logar</button>
         </div>
 
-        <!-- JANELA DE STATUS FLUTUANTE (ABRE APÓS LOGIN) -->
+        <!-- JANELA DE STATUS FLUTUANTE (ABRE DEPOIS DOLOGIN) -->
         <div class="janela-status-jogador" id="status-box-flutuante">
             <div class="status-grid-c">
                 <span class="status-nome-c" id="status-lbl-nome">Shinobi Logado</span>
@@ -51,19 +48,19 @@
             <p style="margin:0; font-size:0.75rem; color:#666;">Tire de 13 a 20 no D20 para dobrar a aposta (Banca: 60%).</p>
         </div>
 
-        <!-- MODALIDADE 3: ROLETA DAS VILAS -->
+        <!-- MODALIDADE 3: ROLETA MALUCA -->
         <div id="game-roleta" class="game-section">
             <select id="aposta-alvo-roleta" class="roleta-select-vila">
-                <option value="konoha">Apostar em Konoha (Paga 3x)</option>
-                <option value="nevoa">Apostar em Névoa (Paga 3x)</option>
-                <option value="areia">Apostar em Areia (Paga 3x)</option>
-                <option value="nuvem">Apostar em Nuvem (Paga 3x)</option>
-                <option value="akatsuki">Apostar na AKATSUKI (Raro - Paga 10x)</option>
+                <option value="konoha">Apostar em carne de caju (Paga 3x)</option>
+                <option value="nevoa">Apostar em não choraxx (Paga 3x)</option>
+                <option value="areia">Apostar em pega visão (Paga 3x)</option>
+                <option value="nuvem">Apostar em redondo (Paga 3x)</option>
+                <option value="akatsuki">Apostar em abacate (Raro - Paga 10x)</option>
             </select>
             <div id="roleta-resultado-lbl">---</div>
         </div>
 
-        <!-- ENTRADA DE QUANTIAS UNIFICADA -->
+        <!-- ENTRADA DE QUANTIAS -->
         <div class="input-block-c" id="bloco-controles-aposta" style="display: none;">
             <select id="quantia-aposta">
                 <option value="500">Aposta (500 Ryos)</option>
@@ -76,7 +73,7 @@
         <div class="status-carteira-lbl" id="status-txt">Faça login para destravar a banca</div>
     </div>
 
-    <!-- VÍNCULO COM O ARQUIVO JAVASCRIPT EXTERNO -->
+    <!-- Vamos apostar até enlouqueceeer -->
     <script src="sript.js"></script>
 </body>
 </html>
