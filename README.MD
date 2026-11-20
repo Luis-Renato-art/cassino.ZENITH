@@ -6,7 +6,7 @@ Por isso, em vez de fazer a matemática no código da página, o site recebe ape
 
 🚀 Acesse e Teste o Projeto
 
-🔗 Link: [ cassino-zenith-9xd3lzmxb-peixin-auras-projects.vercel.app]
+🔗 Link: [ https://cassino-zenith-9xd3lzmxb-peixin-auras-projects.vercel.app ]
 
 • ID: EXL123
 
