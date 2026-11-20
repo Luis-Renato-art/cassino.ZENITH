@@ -12,10 +12,12 @@
     <div class="cassino-wrapper">
         <h1>CASSINO ZENITH 🎰</h1>
             <!-- LOGIN SEGURO DO JOGADOR -->
-        <div id="painel-autenticacao" style="margin-bottom: 16px;">
-            <input type="text" id="p-id" placeholder="SEU ID DE JOGADOR" autocomplete="off" style="width:40%; padding:8px;">
-            <input type="password" id="p-pass" placeholder="SENHA" style="width:30%; padding:8px;">
-            <button onclick="conectarBanca()" style="padding:8px 12px; font-size:0.85rem;">Logar</button>
+        <div id="painel-autenticacao" class="painel-autenticacao">
+            <div class="campos-login">
+                <input type="text" id="p-id" placeholder="SEU ID DE JOGADOR" autocomplete="off">
+                <input type="password" id="p-pass" placeholder="SENHA" autocomplete="off">
+            </div>
+            <button class="btn-login" type="button" onclick="conectarBanca()">Logar</button>
         </div>
 
         <!-- JANELA DE STATUS FLUTUANTE (ABRE DEPOIS DOLOGIN) -->
@@ -24,7 +26,7 @@
                 <span class="status-nome-c" id="status-lbl-nome">Shinobi Logado</span>
                 <span class="status-vila-c" id="status-lbl-vila">Konoha</span>
             </div>
-            <p class="status-saldo-c">💰 Carteira: <span id="status-lbl-saldo">0</span> Ryos</p>
+            <p class="status-saldo-c">💰 Saldo: <span id="status-lbl-saldo">0</span> Ryos</p>
         </div>
 
         <!-- ABAS DE NAVEGAÇÃO DOS JOGOS -->

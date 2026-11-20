@@ -33,6 +33,84 @@ h1 {
     text-shadow: 0 0 10px #ff4500;
 }
 
+.painel-autenticacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.campos-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+.campos-login input {
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.88);
+    border: 1px solid rgba(255, 191, 105, 0.28);
+    box-shadow: inset 0 0 12px rgba(255, 69, 0, 0.08);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.campos-login input:focus {
+    outline: none;
+    border-color: #ffbf69;
+    box-shadow: 0 0 12px rgba(255, 191, 105, 0.22), inset 0 0 10px rgba(255, 69, 0, 0.12);
+}
+
+.btn-login {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 46%;
+    min-width: 150px;
+    padding: 12px 18px;
+    border: 1px solid #ffbf69;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #b91d32 0%, #ff4500 48%, #ff0055 100%);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.42), 0 0 24px rgba(255, 0, 85, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-login::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -70%;
+    left: -45%;
+    width: 30%;
+    height: 240%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+    transform: rotate(25deg);
+    animation: brilhoLogin 2.4s ease-in-out infinite;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.12);
+    box-shadow: 0 0 18px rgba(255, 191, 105, 0.55), 0 0 32px rgba(255, 69, 0, 0.32);
+}
+
+.btn-login:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.btn-login:focus-visible {
+    outline: 2px solid #ffbf69;
+    outline-offset: 4px;
+}
+
 .subtitle {
     color: #666;
     font-size: 0.8rem;
@@ -95,8 +173,8 @@ h1 {
 
 .tab-btn {
     flex: 1;
-    background: none;
-    border: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.08));
+    border: 1px solid transparent;
     padding: 10px 4px;
     color: #888;
     font-size: 0.8rem;
@@ -104,12 +182,20 @@ h1 {
     cursor: pointer;
     border-radius: 6px;
     text-transform: uppercase;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .tab-btn.active {
-    background: #ff4500;
+    background: linear-gradient(135deg, #ff4500, #ff0055);
+    border-color: rgba(255, 191, 105, 0.55);
     color: #fff;
     box-shadow: 0 2px 8px rgba(255, 69, 0, 0.3);
+}
+
+.tab-btn:not(.active):hover {
+    color: #ffbf69;
+    border-color: rgba(255, 191, 105, 0.22);
+    transform: translateY(-1px);
 }
 
 /* SEÇÕES DOS JOGOS DE AZAR */
@@ -184,16 +270,28 @@ select {
 }
 
 .btn-acao-giro {
-    background: linear-gradient(135deg, #ff4500, #ff0055);
+    background: linear-gradient(135deg, #b91d32, #ff4500 55%, #ff0055);
     color: #fff;
-    border: none;
+    border: 1px solid rgba(255, 191, 105, 0.5);
     padding: 14px;
-    border-radius: 8px;
+    border-radius: 999px;
     font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
     cursor: pointer;
     width: 100%;
+    box-shadow: 0 0 14px rgba(255, 69, 0, 0.32);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-acao-giro:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 0 20px rgba(255, 191, 105, 0.38), 0 0 28px rgba(255, 69, 0, 0.24);
+}
+
+.btn-acao-giro:active {
+    transform: translateY(1px) scale(0.99);
 }
 
 button:disabled,
@@ -227,5 +325,50 @@ input:disabled {
 
     100% {
         transform: translateY(-3px);
+    }
+}
+
+@keyframes brilhoLogin {
+    0% {
+        left: -45%;
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    70%,
+    100% {
+        left: 115%;
+        opacity: 0;
+    }
+}
+
+.btn-login:disabled::before {
+    animation: none;
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-login::before {
+        animation: none;
+    }
+
+    .btn-login,
+    .btn-acao-giro,
+    .tab-btn,
+    .campos-login input {
+        transition: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .campos-login {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-login {
+        width: 70%;
     }
 }
