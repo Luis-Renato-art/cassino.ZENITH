@@ -5,12 +5,17 @@ Um dos grandes desafios era evitar que o cassino virasse uma fonte de dinheiro f
 Por isso, em vez de fazer a matemática no código da página, o site recebe apenas o resultado final. Toda a lógica e os cálculos rodam dentro de uma planilha que utilizo como API e banco de dados. 
 
 🚀 Acesse e Teste o Projeto
-🔗 Link: [ https://cassino-zenith-7fgxbczds-peixin-auras-projects.vercel.app ]
+
+🔗 Link: [ cassino-zenith-9xd3lzmxb-peixin-auras-projects.vercel.app]
+
 • ID: EXL123
+
 • Senha: 1006. (Não se esqueça do ponto final na senha!)
 
 🛠️ Tecnologias Utilizadas
+
 • Front-end: HTML5, CSS3, JavaScript 
+
 • Back-end / Banco de Dados: Planilha integrada como API
 
 
